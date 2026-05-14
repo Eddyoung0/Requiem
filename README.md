@@ -1,19 +1,77 @@
 # Event Ranking
 
-A Java-based web application for event ranking and voting.
+A simple web application for discovering, ranking, and voting on events.
+
+## What You Can Do
+
+- **Create an Account** - Register and login to access the platform
+- **Browse Events** - View all events across different categories
+- **Submit Events** - Add new events to the platform
+- **Vote & Rank** - Vote on events to help rank them
+- **Bookmark Events** - Save your favorite events for later
+- **View Analytics** - Check trending events and voting statistics
+- **Admin Panel** - Manage events, categories, and users (admin only)
+
+## How to Set Up
+
+### Requirements
+
+- Java 11 or higher
+- MySQL database
+- Maven
+- Tomcat or similar web server
+
+### Installation Steps
+
+1. **Clone the project**
+
+   ```
+   git clone <repository-url>
+   cd EventRanking_Main
+   ```
+
+2. **Update Database Configuration**
+   - Open `eventranking/src/main/java/com/eventranking/util/DBConnection.java`
+   - Update these values with your MySQL credentials:
+     - URL: `jdbc:mysql://localhost:3306/event_ranking_db`
+     - USERNAME: your MySQL username
+     - PASSWORD: your MySQL password
+
+3. **Create Database**
+   - Use the SQL script in `eventranking/src/main/webapp/WEB-INF/includes/schema.sql`
+   - Run it in your MySQL client to create tables
+
+4. **Build the Project**
+
+   ```
+   cd eventranking
+   mvn clean package
+   ```
+
+5. **Deploy**
+   - Copy the generated WAR file to your Tomcat webapps folder
+   - Start Tomcat
+
+6. **Access the Application**
+   - Open your browser and go to `http://localhost:8080/queuepro`
 
 ## Project Structure
 
-- **src/main/java/com/eventranking/**
-  - `controller/` - Servlet controllers
-  - `dao/` - Database access objects
-  - `model/` - Data models
-  - `service/` - Business logic
-  - `util/` - Utility classes
+- **java/com/eventranking/controller/** - Handles user requests (login, voting, etc.)
+- **java/com/eventranking/dao/** - Manages database operations
+- **java/com/eventranking/model/** - Event and User data objects
+- **java/com/eventranking/util/** - Helper classes (database connection, email, scheduler)
+- **webapp/** - User interface files (JSP pages, CSS, JavaScript, images)
 
-- **src/main/webapp/**
-  - `admin/` - Admin pages
-  - `css/` - Stylesheets
-  - `js/` - JavaScript files
-  - `images/` - Image assets
-  - `WEB-INF/` - Configuration files
+## Main Features
+
+- User authentication with "Remember Me" functionality
+- Event submission and categorization
+- Voting system with analytics
+- Admin dashboard for content management
+- Email notifications and reminders
+- Responsive web interface
+
+## Default Login
+
+After setup, you can create a new account or check the database for test credentials.

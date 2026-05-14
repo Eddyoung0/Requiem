@@ -1,3 +1,8 @@
+package com.eventranking.dao;
+
+import com.eventranking.model.User;
+import com.eventranking.util.DBConnection;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
