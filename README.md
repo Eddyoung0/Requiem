@@ -72,6 +72,12 @@ A simple web application for discovering, ranking, and voting on events.
 - Email notifications and reminders
 - Responsive web interface
 
+## Authentication Pages
+
+- **Login Page** - Users can login with their email and password. There's a "Remember Me" checkbox to stay logged in for 30 days without re-entering credentials.
+- **Register Page** - New users can create an account by providing their name, email, and password. After registration, you can immediately login to start exploring events.
+- Both pages have validation to ensure email format is correct and passwords are secure.
+
 ## Default Login
 
 After setup, you can create a new account or check the database for test credentials.
