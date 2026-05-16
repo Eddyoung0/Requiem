@@ -1,3 +1,5 @@
+package com.eventranking.model;
+
 import java.sql.Timestamp;
 
 public class User {
@@ -68,7 +70,7 @@ public class User {
     public void setRole(String v) {
         this.role = v;
     }
-
+    
     public void setStatus(String v) {
         this.status = v;
     }
