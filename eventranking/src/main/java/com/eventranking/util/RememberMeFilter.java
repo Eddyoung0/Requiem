@@ -118,10 +118,10 @@ public class RememberMeFilter implements Filter {
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
                         HttpSession session = req.getSession(true);
-                        session.setAttribute("userId",    rs.getInt("user_id"));
-                        session.setAttribute("userName",  rs.getString("name"));
+                        session.setAttribute("userId", rs.getInt("user_id"));
+                        session.setAttribute("userName", rs.getString("name"));
                         session.setAttribute("userEmail", rs.getString("email"));
-                        session.setAttribute("userRole",  rs.getString("role"));
+                        session.setAttribute("userRole", rs.getString("role"));
                         session.setMaxInactiveInterval(30 * 60);
                     }
                 }

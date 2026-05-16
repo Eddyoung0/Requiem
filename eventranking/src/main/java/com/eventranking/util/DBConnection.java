@@ -9,9 +9,9 @@ public class DBConnection {
     // Connection settings
     private static final String URL = "jdbc:mysql://localhost:3306/event_ranking_db"
             + "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-    private static final String USERNAME = "root"; // your MySQL username
-    private static final String PASSWORD = "1234"; // your MySQL password
-    // ─────────────────────────────────────────────────────────
+    private static final String USERNAME = "root"; // MySQL username
+    private static final String PASSWORD = "1234"; // MySQL password
+
 
     static {
         try {

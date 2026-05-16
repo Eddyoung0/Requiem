@@ -78,6 +78,52 @@ A simple web application for discovering, ranking, and voting on events.
 - **Register Page** - New users can create an account by providing their name, email, and password. After registration, you can immediately login to start exploring events.
 - Both pages have validation to ensure email format is correct and passwords are secure.
 
+## Core Servlets
+
+### LoginServlet
+
+- **URL:** `/login`
+- **Methods:** GET, POST
+- **Functionality:** Handles user authentication with email and password
+- **Features:**
+  - Validates user credentials against the database
+  - Supports "Remember Me" functionality (30-day persistent login)
+  - Redirects authenticated users to the home page
+  - Displays error messages for invalid credentials
+
+### RegisterServlet
+
+- **URL:** `/register`
+- **Methods:** GET, POST
+- **Functionality:** Handles new user registration
+- **Features:**
+  - Validates user input (email format, password requirements)
+  - Creates new user accounts in the database
+  - Prevents duplicate email registrations
+  - Automatically logs in users after successful registration
+
+### LogoutServlet
+
+- **URL:** `/logout`
+- **Methods:** POST
+- **Functionality:** Handles user logout
+- **Features:**
+  - Clears user session
+  - Removes authentication cookies
+  - Redirects users to the login page
+  - Cleans up "Remember Me" tokens
+
+### UserDashboardServlet
+
+- **URL:** `/user-dashboard`
+- **Methods:** GET, POST
+- **Functionality:** Displays personalized user dashboard
+- **Features:**
+  - Shows user's bookmarked events
+  - Displays voting history and statistics
+  - Allows users to manage their events
+  - Provides quick access to user preferences
+
 ## Default Login
 
 After setup, you can create a new account or check the database for test credentials.
